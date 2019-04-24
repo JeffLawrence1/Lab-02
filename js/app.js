@@ -20,6 +20,7 @@ Animal.prototype.render = function() {
   let $animalClone = $(animalClone[0].content);
 
   // add the element content
+  $animalClone.find('img').attr('value', this.keyword);
   $animalClone.find('h2').text(this.title);
   $animalClone.find('img').attr('src', this.imageUrl);
   $animalClone.find('p').text(this.description);
@@ -50,12 +51,16 @@ Animal.loadAnimals = () => {
   dropDrown();
 };
 
+//Event handler function
+let animalSelector = (event) => {
+  $('section').hide();
+  let img = $(`img[value="${event.target.value}"]`).parent();
+  $(img).show();
+};
+
 //Drop-down list event handler
-// $('select').on('click', function(){
-//   let $selection = $(this).val();
-//   $('img').hide();
-//   $
-// });
+$('#selectBox').on('change', animalSelector);
+
 
 //dropdown menu loader function
 const dropDrown = () => {
