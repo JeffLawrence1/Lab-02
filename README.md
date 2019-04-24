@@ -13,16 +13,16 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 8:20
 
-Finish time: _____
+Finish time: 9:22AM
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1hr 2minutes
 
 # Feature Two - Filter Images
-Number and name of feature: ________________________________
+Number and name of feature: Two, to filter the images so that when a user selects a keyword, only the images with a matching keyword are displayed.
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour 30 minutes
 
-Start time: _____
+Start time: 9:33AM
 
 Finish time: _____
 
