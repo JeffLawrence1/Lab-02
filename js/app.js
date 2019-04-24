@@ -43,17 +43,22 @@ Animal.readJson = () => {
     .then(Animal.loadAnimals);
 };
 
-
-
 //read global array activate render function
 Animal.loadAnimals = () => {
   Animal.holdingArray.forEach(animal => {
     animal.render();
   });
+  //load dropdown menu
+  dropDrown();
 };
 
 //Drop-down list event handler
-$('select').on('click', function(){
+// $('select').on('click', function(){
+  
+// });
+
+//dropdown menu loader function
+const dropDrown = () => {
   Animal.holdingArray.forEach( (animal) => {
 
     let animalListClone = $('#animalList').clone();
@@ -65,8 +70,8 @@ $('select').on('click', function(){
     //add element to parent
     $animalListClone.appendTo('select');
   });
+};
 
-});
 
 //start it off
 $(() => Animal.readJson());
