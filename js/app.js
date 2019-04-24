@@ -52,6 +52,21 @@ Animal.loadAnimals = () => {
   });
 };
 
+//Drop-down list event handler
+$('select').on('click', function(){
+  Animal.holdingArray.forEach( (animal) => {
+
+    let animalListClone = $('#animalList').clone();
+    let $animalListClone = $(animalListClone[0].content);
+
+    //add element content
+    $animalListClone.find('option').attr('value', animal.keyword).text(animal.keyword);
+
+    //add element to parent
+    $animalListClone.appendTo('select');
+  });
+
+});
 
 //start it off
 $(() => Animal.readJson());
