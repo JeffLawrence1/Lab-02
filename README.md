@@ -24,17 +24,17 @@ Estimate of time needed to complete: 1 hour 30 minutes
 
 Start time: 9:33AM
 
-Finish time: _____
+Finish time: 12PM
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2:27
 
 # Feature Three - Style the Application
-Number and name of feature: ________________________________
+Number and name of feature: Style the Application
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 min
 
-Start time: _____
+Start time: 12PM
 
-Finish time: _____
+Finish time: 12:35PM
 
-Actual time needed to complete: _____
+Actual time needed to complete: 35 minutes
