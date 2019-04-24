@@ -2,7 +2,7 @@
 //global array to hold pictures
 Animal.holdingArray =[];
 
-// constructor
+// constructor - has to be function because uses this
 function Animal(animal){
   this.title = animal.title;
   this.imageUrl = animal.image_url;
@@ -12,8 +12,23 @@ function Animal(animal){
 }
 
 
-// render prototype
+// render prototype --- has to be function because uses this
+Animal.prototype.render = function() {
+// create the element
+  let animalClone = $('#photo-template').clone();
+  // reassigning to jquery variable to be able to use jquery
+  let $animalClone = $(animalClone[0].content);
 
+  // add the element content
+  $animalClone.find('h2').text(this.title);
+  $animalClone.find('img').attr('src', this.imageUrl);
+  $animalClone.find('p').text(this.description);
+  $animalClone.find('h3').text(`Number of Horns: ${this.horns}`);
+
+  // add element to parent
+  $animalClone.appendTo('main');
+
+};
 
 
 
@@ -31,7 +46,11 @@ Animal.readJson = () => {
 
 
 //read global array activate render function
-
+Animal.loadAnimals = () => {
+  Animal.holdingArray.forEach(animal => {
+    animal.render();
+  });
+};
 
 
 //start it off
